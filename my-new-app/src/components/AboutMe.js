@@ -14,7 +14,7 @@ const AboutMe = () => {
       <h2>Why Choose Me?</h2>
       <p>With a strong foundation in Computer Science and a creative flair for design, I bring a unique blend of skills to the table. My ability to bridge the gap between technical expertise and user-focused design sets me apart in the field. I'm a dedicated learner, a collaborative team player, and I'm always eager to tackle new challenges.</p>
       <h2>Let's Connect</h2>
-      <p>I'm open to exciting internship opportunities and collaborations in the world of UX design and beyond. If you're interested in working together or simply want to chat about design, technology, or anything else, feel free to reach out to me. I can't wait to connect and explore the possibilities ahead.
+      <p>I'm open to exciting internship opportunities and collaborations in the world of Computer Science. If you're interested in working together or simply want to chat about design, technology, or anything else, feel free to reach out to me. I can't wait to connect and explore the possibilities ahead.
 
 Thank you for visiting my website, and I look forward to connecting with you soon!</p>
     </div>

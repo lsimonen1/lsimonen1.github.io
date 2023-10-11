@@ -16,13 +16,30 @@ code {
   box-shadow: 0rem 0.5rem 2rem 0.5rem rgba(0,0,0,0.5);
 }
 
+.contactPageElement{
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  text-align: center;
+  margin: 3rem;
+  box-shadow: 0rem 0.5rem 2rem 0.5rem rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background-color: linen;
+}
+
 .TabButton{
   margin: 1rem;
 }
 
-.TabButtonLink{
-
+.titleMargin{
+  padding: 0;
+  margin:0;
 }
+
+.basic{
+  background-color:lightslategray;
+  height: 100vh;
+}
+
 
 .button{
   background-color:transparent;
@@ -33,7 +50,8 @@ code {
   padding: 0;
   font-family: 'Dosis', sans-serif;
   font-family: 'Rubik', sans-serif;
-  
+  font-size: 1.4rem;
+
 }
 .topHalf{
   display: flex;
@@ -43,13 +61,14 @@ code {
 .aboutMeDiv{
     display: flex;
     
+    
     }
 
 .titleName{
   font-family: 'Dosis', sans-serif;
   font-family: 'Rubik', sans-serif;
   margin-top: 30vh;
-font-size: 7vw;
+font-size: 6vw;
 padding-bottom: 0;
 margin-bottom: 0;
 color:rgb(228, 238, 243);  

@@ -1,11 +1,13 @@
 import React from 'react'
+import {Link} from "react-router-dom";
 
-const TabButton = ({title}) => {
+const TabButton = ({title, linkpage}) => {
+
   return (
     <div className='TabButton'>
-      <a className='TabButtonLink' href = "https://uwprod-my.sharepoint.com/:w:/g/personal/lsimonen_wisc_edu/EZ1WbUAQKDtCoU3eg64X1MsBoL-iYzbqCLm65KJXROMckQ">
-      <button className = "button" >{title}</button>
-      </a>
+      
+      <Link to = {linkpage} className = "button">{title}</Link>
+      
     </div>
   )
 }
