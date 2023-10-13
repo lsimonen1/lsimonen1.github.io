@@ -25,7 +25,7 @@ function Fade() {
   }, []);
 
   //<TabButton class = "col-2"title = 'About Me' />
-  return <div style={{ margin: "0rem", background: "linear-gradient(to bottom right,rgba(00,"+colorState/1.5+","+colorState/1.5+",1),rgba(100,"+colorState/2+","+colorState/2+",1))"}}>
+  return <div style={{ margin: "0rem", background: "linear-gradient(to bottom right,rgba(00,"+colorState/1.5+","+colorState/1.5+",1),rgba(150,"+colorState/2+","+colorState/2+",1))"}}>
 
 <div className="namePage" style = {{}}>
       <div className="topHalf">

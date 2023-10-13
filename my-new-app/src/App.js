@@ -8,9 +8,9 @@ function App() {
     <div className="App">
       <Fade />
       <div className = "aboutMeDiv">
-        <div className = "col-4"></div>
+        
       <AboutMe />
-      <div className = "col-4"></div>
+      
 
       </div>
     </div>
