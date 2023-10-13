@@ -12,7 +12,7 @@ const AboutMe = () => {
       
       <div class = "col-4">
       <h2>My Journey</h2>
-      <p>My fascination with technology and design began at a young age. In middle school, I started experimenting with tools like Photoshop and Python, and it wasn't long before I fell in love with the creative potential they offered. Although I've taken a break from Python for a while, I'm eager to dive back in and expand my coding skills in the near future.</p>
+      <p>My fascination with technology and design began at a young age. In middle school, I started experimenting with tools like Photoshop and Coding, and it wasn't long before I fell in love with the creative potential they offered. Although I sitll have lots to learn, I'm eager to expand my coding skills in the near future.</p>
       </div>
       <div class = "col-2"></div>
         </div>
