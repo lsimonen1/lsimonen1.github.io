@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import TabButton from "./TabButton";
 import {Card, Col, Container, Row} from "react-bootstrap";
 import { useNavigate } from "react-router";
+import { Navbar } from "react-bootstrap";
 
 function Fade() {
 
@@ -88,16 +89,38 @@ function Fade() {
 
       </div>
       <div style={{padding: "1rem"}}></div>
-      <Container style={{width: "30vw"}}>
-      <Row  style={{alignItems: 'center', flex: 1, justifyContent: 'center'}}>
+      <Container fluid style={{width: "50vw"}}>
+      <Row  style={{alignItems: 'center', flex: 1, justifyContent: 'center'}} xs={1} s= {1} md={3} lg={3} xl={6} xxl={6}>
+        <Col>
       <Card id = "portfoliobutton" style={{flex: 1, border: "2px solid white", color: 'white', backgroundColor: `${ button1color }`, 
       display: "flex", margin: "0.5rem", padding: "0.5rem", fontFamily: "Dosis", fontWeight: "bold"}} onMouseEnter={() => makeBackgroundWhite()} onMouseLeave={() => makeBackgruondClear()} onClick={goToPortfolio}>Portfolio</Card>
+      </Col>
+      <Col>
       <Card id = "resumebutton" style={{flex: 1, border: "2px solid white", color: 'white', backgroundColor: `${ button2color }`, 
       display: "flex", margin: "0rem", padding: "0.5rem", fontFamily: "Dosis", fontWeight: "bold"}} onMouseEnter={() => makeBackground2White()} onMouseLeave={() => makeBackgruond2Clear()} onClick={goToResume}>Resume</Card>
+     </Col>
+     <Col>
       <Card id = "aboutmebutton" style={{flex: 1, border: "2px solid white", color: 'white', backgroundColor: `${ button3color }`, 
       display: "flex", margin: "0.5rem", padding: "0.5rem", fontFamily: "Dosis", fontWeight: "bold"}} onMouseEnter={() => makeBackground3White()} onMouseLeave={() => makeBackgruond3Clear()} onClick={goToAboutMe}>About Me</Card>
+      </Col>
       </Row>
       </Container>
+
+      <Navbar fixed = "bottom" bg="transparent" variant="light" >
+        <Navbar.Collapse className="justify-content-center" >
+          <Navbar.Text >
+            <a style = {{color: "white", fontFamily: "Dosis"}} href="https://www.linkedin.com/in/lucas-simonen-912801261/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </Navbar.Text>
+          <span className="navbar-divider">|</span>
+          <Navbar.Text>
+            <a style = {{color: "white", fontFamily: "Dosis"}} href="https://wisc.joinhandshake.com/stu/users/32058183/" target="_blank" rel="noopener noreferrer">Handshake.com</a>
+          </Navbar.Text>
+          <span className="navbar-divider">|</span>
+          <Navbar.Text style = {{color: "white", fontFamily: "Dosis"}}>Phone: (262) 646-0833</Navbar.Text>
+          <span className="navbar-divider">|</span>
+          <Navbar.Text style = {{color: "white", fontFamily: "Dosis"}}>Email: Lsimonen@wisc.edu</Navbar.Text>
+        </Navbar.Collapse>
+      </Navbar>
       </header>
       </div>
 

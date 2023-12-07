@@ -43,11 +43,27 @@ code {
 
 .TabButton{
   margin: 1rem;
+  
 }
 
 .titleMargin{
   padding: 0;
   margin:0;
+}
+
+page-container {
+  min-height: 100%;
+  position: relative;
+}
+
+/* Navbar (Footer) styles */
+.navbar {
+  color: antiquewhite;
+}
+
+.navbar-divider {
+  margin: 0 5px;
+  color: antiquewhite;
 }
 
 .basic{
@@ -103,7 +119,7 @@ code {
   font-family: 'Rubik', sans-serif;
   margin-top: 30vh;
   margin-bottom: 0;
-font-size: 6vw;
+font-size: 7vw;
 padding-bottom: 0;
 margin-bottom: 0;
 color:rgb(228, 238, 243, 0.91);  
