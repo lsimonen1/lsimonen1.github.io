@@ -1,7 +1,8 @@
 import React from 'react'
 import TabButton from './TabButton'
 import { useState, useEffect } from 'react';
-import { Card, Row, Col, Container, Navbar } from 'react-bootstrap';
+import { Card, Row, Col, Container, Navbar, Image } from 'react-bootstrap';
+import headshot from './headshot.PNG';
 function Contact() {
 
   const [colorState, setColorState] = useState();
@@ -26,38 +27,47 @@ function Contact() {
 // xs={5} md={3} lg={2} xl = {2} xxl={1}
 
   return (
-    <div className = "basic1" style={{ margin: "0rem",height: "100%", background: "linear-gradient(to bottom right,rgba(00,"+colorState/1.5+","+colorState/1.5+",1),rgba(150,"+colorState/2+","+colorState/2+",1))"}}>
+    <div className = "basic1" style={{ margin: "0rem",height: "100%", backgroundColor: 'transparent'}}>
+      <hr></hr>
+
       <div className = "aboutMeDiv">
       
       </div>
       <Row>
       
       </Row>
-      <Container fluid style={{ margin: "0rem", background: "transparent", height: "130vh"}}>
-      <TabButton class = "col-2"title = 'Back' linkpage={"/"}/>
-      <Card.Title style = {{paddingTop: '0.5rem', fontSize: '4rem'}}>About Me</Card.Title>
-      <Row xs={1} s= {1} md={2} lg={3} xl={3} xxl={3}>
+      <Container fluid style={{ margin: "0rem", background: "transparent"}}>
+      
+      <Card.Title class = "titleName" className = 'titleName' style = {{marginTop: '0', paddingTop: '0.5rem',paddingBottom: '1rem', fontFamily: "Dosis", fontSize: '5vw'}}>About Me</Card.Title>
+
+      <Image
+    img src={headshot} alt="Photo of Lucas"
+    height={300}
+    width={320}
+    style={{ alignSelf: 'center', borderRadius: '25%', marginBottom: '10vh' }}
+/>
+      <Row xs={1} s= {1} md={1} lg={3} xl={3} xxl={3}>
         {/* Repeat the following block for each card */}
         <Col>
-        <Card id = "aboutmebutton" style={{flex: 1, border: "2px solid white", color: 'white', backgroundColor: 'transparent', 
+        <Card id = "aboutmebutton" style={{flex: 1, border: "none", color: 'white', backgroundColor: 'transparent', 
        margin: "0.5rem", pasdding: "0.5rem", fontFamily: "Dosis"}}>
         <Card.Title style = {{paddingTop: '0.5rem'}}> Who am I?</Card.Title>
         <Card.Body>Hello! I am Lucas Simonen, a Computer Science undergraduate student at the University of Wisconsin-Madison,
- hailing from Waukesha, Wisconsin. As a junior, I am actively seeking new opportunities within the realm of computer science. One of my greatest interests is UI design.
+ hailing from Waukesha, Wisconsin. As a junior, I am seeking opportunities to apply technical skills in agile software development teams. I have ambition to learn more about software development in new situations and contribute positively to collaborative projects. One of my greatest interests right now is UI design.
   I'm captivated by the way design can shape user experiences and enhance the functionality of software.
-  Whether it's creating visually appealing interfaces or crafting intuitive user journeys, I find it really fun to be able to work with something that is extremely functionable but also creative.</Card.Body>
+  Whether it's creating visually appealing interfaces or working on the backend of projects, I really look forward to working on a project that can push my technical knowledge and that other people can use.</Card.Body>
        </Card>
         </Col>
         <Col>
-        <Card id = "aboutmebutton" style={{flex: 1, border: "2px solid white", color: 'white', backgroundColor: 'transparent', 
+        <Card id = "aboutmebutton" style={{flex: 1, border: "none", color: 'white', backgroundColor: 'transparent', 
        margin: "0.5rem", pasdding: "0.5rem", fontFamily: "Dosis"}}>
         <Card.Title style = {{paddingTop: '0.5rem'}}> Technical Skills</Card.Title>
-        <Card.Body>Java (Intermediate), JavaScript (Intermediate), React (Intermediate), HTML (Advanced), CSS(Intermediate), Photoshop (Advanced), Lightroom (Advanced), Premiere Pro (Advanced), Illustrator (Intermediate), After Effects (Intermediate) and Dream Weaver (Intermediate).
+        <Card.Body>Java (Intermediate), JavaScript (Intermediate), React/React Native (Intermediate), SQL (Beginner), HTML (Advanced), CSS(Intermediate), VSCode (Advanced), Git (Intermediate), Photoshop (Advanced), Lightroom (Advanced), Premiere Pro (Advanced), Illustrator (Intermediate), After Effects (Intermediate) and Dream Weaver (Intermediate).
         </Card.Body>
        </Card>
         </Col>
         <Col>
-        <Card id = "aboutmebutton" style={{flex: 1, border: "2px solid white", color: 'white', backgroundColor: 'transparent', 
+        <Card id = "aboutmebutton" style={{flex: 1, border: "none", color: 'white', backgroundColor: 'transparent', 
        margin: "0.5rem", pasdding: "0.5rem", fontFamily: "Dosis"}}>
         <Card.Title>Non-Technical Skills</Card.Title>
         <Card.Body>I am very personable and have developed lots of experience communicating effectively by working with customers as a concessionaire and waiter.
@@ -67,29 +77,18 @@ function Contact() {
         </Col>
         {/* End of card block */}
       </Row>
+      <div style={{height: "10vh"}}>
+
+    </div>
       </Container>
-      <Navbar bg="transparent" variant="light" >
-        <Navbar.Collapse className="justify-content-center" >
-          <Navbar.Text >
-            <a style = {{color: "white", fontFamily: "Dosis"}} href="https://www.linkedin.com/in/lucas-simonen-912801261/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </Navbar.Text>
-          <span className="navbar-divider">|</span>
-          <Navbar.Text>
-            <a style = {{color: "white", fontFamily: "Dosis"}} href="https://wisc.joinhandshake.com/stu/users/32058183/" target="_blank" rel="noopener noreferrer">Handshake.com</a>
-          </Navbar.Text>
-          <span className="navbar-divider">|</span>
-          <Navbar.Text style = {{color: "white", fontFamily: "Dosis"}}>Phone: (262) 646-0833</Navbar.Text>
-          <span className="navbar-divider">|</span>
-          <Navbar.Text style = {{color: "white", fontFamily: "Dosis"}}>Email: Lsimonen@wisc.edu</Navbar.Text>
-        </Navbar.Collapse>
-      </Navbar>
+      
 
     
 
 
 
       
-      
+      <hr></hr>
     </div>
   )
 }

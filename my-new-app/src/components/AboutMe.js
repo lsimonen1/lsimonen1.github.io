@@ -6,7 +6,7 @@ const AboutMe = () => {
     <div className = 'aboutMeSection'>
     <div class = "col-2"></div>
         <div class = "col-4">
-      <h2>About Me</h2>
+      
       <p>Hello and welcome to my personal website! I'm Lucas, a passionate Computer Science major with a keen interest in UI design and graphic design. I'm excited to share a bit about myself and my journey so far.</p>
       </div>
       

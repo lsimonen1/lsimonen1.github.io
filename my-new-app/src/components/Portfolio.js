@@ -11,19 +11,6 @@ import { Navbar, Col, Row, Container, Card, Image } from 'react-bootstrap'
 
 
 
-/*
-
-
-
-
-        
-
-
-        
-
- <p>More to come soon! Website is still under construction</p>
-
-        */
 
 function Portfolio() {
 
@@ -47,20 +34,20 @@ function Portfolio() {
   }, []);
 
   return (
-    <div className = "basic1" style={{ margin: "0rem",height: "100%", background: "linear-gradient(to bottom right,rgba(00,"+colorState/1.5+","+colorState/1.5+",1),rgba(150,"+colorState/2+","+colorState/2+",1))"}}>
+    <div className = "basic1" style={{ margin: "0rem",height: "100%", backgroundColor: 'transparent'}}>
+
     <div className = "aboutMeDiv">
     
     </div>
     <Row>
     
     </Row>
-    <Container fluid style={{ margin: "0rem", background: "transparent", height: "240vh"}}>
-    <TabButton class = "col-2"title = 'Back' linkpage={"/"}/>
+    <Container fluid style={{ margin: "0rem", background: "transparent", height: "fit-content"}}>
     <Card.Title style = {{paddingTop: '0.5rem', fontSize: '4rem'}}>Some of My Projects</Card.Title>
-    <Row xs={1} s= {1} md={2} lg={2} xl={2} xxl={2}>
+    <Row xs={1} s= {1} md={1} lg={1} xl={1} xxl={1}>
       {/* Repeat the following block for each card */}
       <Col>
-      <Card id = "aboutmebutton" style={{flex: 1,display:"flex", border: "2px solid white", color: 'white', backgroundColor: 'transparent', 
+      <Card id = "aboutmebutton" style={{flex: 1,display:"flex", border: "transparent", color: 'white', backgroundColor: 'transparent', 
      margin: "0.5rem", pasdding: "0.5rem", fontFamily: "Dosis"}}>
       <Card.Title style = {{paddingTop: '0.5rem'}}> Two 2D Helicopters flying I made for CS 559 with JS.</Card.Title>
       <Image
@@ -72,7 +59,7 @@ function Portfolio() {
      </Card>
       </Col>
       <Col>
-      <Card id = "aboutmebutton" style={{flex: 1, border: "2px solid white", color: 'white', backgroundColor: 'transparent', 
+      <Card id = "aboutmebutton" style={{flex: 1, border: "transparent", color: 'white', backgroundColor: 'transparent', 
      margin: "0.5rem", pasdding: "0.5rem", fontFamily: "Dosis"}}>
       <Card.Title style = {{paddingTop: '0.5rem'}}>Small graphics town project I made for CS 559 with JS.</Card.Title>
       <Image
@@ -84,10 +71,12 @@ function Portfolio() {
      </Card>
       </Col>
       <Col>
-      <Card id = "aboutmebutton" style={{flex: 1, border: "2px solid white", color: 'white', backgroundColor: 'transparent', 
+      <Card id = "aboutmebutton" style={{flex: 1, border: "transparent", color: 'white', backgroundColor: 'transparent', 
      margin: "0.5rem", pasdding: "0.5rem", fontFamily: "Dosis"}}>
       <Card.Title>Movie poster I designed for COM-ARTS 155</Card.Title>
-    
+    <canvas width = "200px" height = "200px" style = {{border:"1px"}}>
+
+    </canvas>
       <Image
     img src={img} alt="project 3"
     height={350}
@@ -97,9 +86,9 @@ function Portfolio() {
      </Card>
       </Col>
       <Col>
-      <Card id = "aboutmebutton" style={{flex: 1, border: "2px solid white", color: 'white', backgroundColor: 'transparent', 
+      <Card id = "aboutmebutton" style={{flex: 1, border: "transparent", color: 'white', backgroundColor: 'transparent', 
      margin: "0.5rem", pasdding: "0.5rem", fontFamily: "Dosis"}}>
-      <Card.Title>More to come soon! This website is a work in progress and was made during my free time to show some of my skills in react!</Card.Title>
+      <Card.Title>More to come soon! This website is a work in progress.</Card.Title>
      </Card>
       </Col>
       {/* End of card block */}
