@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.4f3e1812.css",
-    "main.js": "/static/js/main.b7de2849.js",
+    "main.css": "/static/css/main.bb91af74.css",
+    "main.js": "/static/js/main.5ac345ce.js",
     "static/js/787.587eed73.chunk.js": "/static/js/787.587eed73.chunk.js",
     "static/media/StealingInTheWestt.png": "/static/media/StealingInTheWestt.92ffc88494d1dd8ca00c.png",
     "static/media/project1.gif": "/static/media/project1.13e4c8062245e652b96d.gif",
     "static/media/project2.gif": "/static/media/project2.0fc854149f6cc1f8624b.gif",
+    "static/media/headshot.PNG": "/static/media/headshot.f3ce3968f5c5853a524f.PNG",
     "index.html": "/index.html",
-    "main.4f3e1812.css.map": "/static/css/main.4f3e1812.css.map",
-    "main.b7de2849.js.map": "/static/js/main.b7de2849.js.map",
+    "main.bb91af74.css.map": "/static/css/main.bb91af74.css.map",
+    "main.5ac345ce.js.map": "/static/js/main.5ac345ce.js.map",
     "787.587eed73.chunk.js.map": "/static/js/787.587eed73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f3e1812.css",
-    "static/js/main.b7de2849.js"
+    "static/css/main.bb91af74.css",
+    "static/js/main.5ac345ce.js"
   ]
 }
