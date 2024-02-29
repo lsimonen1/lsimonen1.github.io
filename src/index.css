@@ -1,0 +1,133 @@
+body {
+  font-family: 'rockwell';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.namePage{
+  text-align: center;
+}
+
+.PPageElement{
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  text-align: center;
+  margin: 0rem;
+  padding: 1rem;
+  
+  height: 25rem;
+  width: 20rem;
+  background-color:#a32767;
+}
+
+.TabButton{
+  margin: 1rem;
+  
+}
+
+.titleMargin{
+  padding: 0;
+  margin:0;
+}
+
+page-container {
+  min-height: 100%;
+  position: relative;
+}
+
+/* Navbar (Footer) styles */
+.navbar {
+  color: antiquewhite;
+}
+
+.navbar-divider {
+  margin: 0 5px;
+  color: antiquewhite;
+}
+
+.basic{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  background-color: #5E0035;
+  color: antiquewhite;
+  display: flex;
+  
+  height: 100vh;
+}
+
+.basic1{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  background-color: #5E0035;
+  color: antiquewhite;
+
+  height: 100vh;
+}
+
+.backgroundslate{
+  background-color:#5E0035;
+  display: flex;
+  
+}
+
+.button{
+  background-color:transparent;
+  border: none;
+  color:rgb(228, 238, 243);  
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.4rem;
+  
+
+}
+.topHalf{
+  display: flex;
+  
+  }
+
+.aboutMeDiv{
+    display: flex;
+    
+    
+    }
+
+.titleName{
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  margin-top: 30vh;
+  margin-bottom: 0;
+font-size: 7vw;
+padding-bottom: 0;
+margin-bottom: 0;
+color:rgb(228, 238, 243, 0.91);  
+
+}
+
+.majorName{
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Rubik', sans-serif;
+padding-top: 0;
+margin-top: 0;
+color:rgb(228, 238, 243, 0.8);  
+
+}
+
+.aboutMeSection{
+  margin-top: 0;
+  padding-top: 0;
+  display:flex;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;  
+  padding-top: 3rem;
+
+}
