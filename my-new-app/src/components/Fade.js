@@ -28,7 +28,7 @@ function Fade() {
 
   function goToPortfolio(){
     //aboutmescroll
-    window.open('http://lucassimonen.com/portfolio/');
+    window.open('https://github.com/lsimonen1/portfolio');
   }
   function goToResume(){
     window.open('https://drive.google.com/file/d/1lsfyvSJ0GRxEWMkKWiImgSGXHmt2ZNf5/view?usp=sharing');
