@@ -7,11 +7,10 @@ import reportWebVitals from './reportWebVitals';
 import {
     createBrowserRouter,
     RouterProvider,
-    Route,
 } from "react-router-dom";
 import Contact from './components/Contact';
 import AboutMe from './components/AboutMe';
-import Portfolio from './components/Portfolio';
+
 
 
 const router = createBrowserRouter([
@@ -24,12 +23,6 @@ const router = createBrowserRouter([
   {
     path: "Contact",
     element: <Contact />
-
-  },
-
-  {
-    path: "Portfolio",
-    element: <Portfolio />
 
   },
 

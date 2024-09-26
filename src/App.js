@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Fade from "./components/Fade";
 import Contact from "./components/Contact";
-import Portfolio from "./components/Portfolio";
 import { Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -14,7 +13,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Fade />}>        
           <Route index element={<Fade />} />
-          <Route path="/portfolio" element={<Portfolio />}></Route>
           <Route path="/resume" element={<Link to={'google.com'}></Link>}></Route>
           <Route path="/aboutme" element={<Contact />}></Route>
           </Route>
