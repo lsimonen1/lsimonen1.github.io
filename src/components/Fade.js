@@ -1,26 +1,20 @@
 import React, { useEffect, useState } from "react";
-import TabButton from "./TabButton";
 import {Card, Col, Container, Row} from "react-bootstrap";
-import { useNavigate } from "react-router";
 import { Navbar } from "react-bootstrap";
-import Portfolio from "./Portfolio";
 import Contact from "./Contact"
 import { useRef } from "react";
 
 function Fade() {
 
-  const navigate1 = useNavigate();
 
   const [button1color, setbutton1color] = useState('transparent')
   const [button2color, setbutton2color] = useState('transparent')
   const [button3color, setbutton3color] = useState('transparent')
 
-  const [colorState, setColorState] = useState();
-  const [color2State, setColor2State] = useState();
+  const [color1, setColor1State] = useState(151);
+  const [color2, setColor2State] = useState(171);
 
-  let color1 = 151;
-  let counter = 1;
-  let color2 = 171;
+  const [counter, setCounterState] = useState(1);
 
   const aboutMeRef = useRef(null);
 
@@ -39,16 +33,14 @@ function Fade() {
   useEffect(() => {
     const timer = setInterval(() => {
         if(color1<200 && color1 > 110){
-            color1 = color1 + counter;
-            color2 = color1 + 20;
+            setColor1State(color1 + counter)
+            setColor2State(color1 + 20)
         }else{
-            counter = counter * -1;
-            color1 = color1 + counter;
+            setCounterState(counter * -1)
+            setColor1State(color1 + counter)
             
 
         }
-        setColorState(color1);
-        setColor2State(color2);
 
         },80)
         return () => clearInterval(timer);
@@ -80,7 +72,7 @@ function Fade() {
 
   }
 
-  return <div style={{ height: "",margin: "0rem", background: "linear-gradient(to bottom right,rgba(10,"+colorState+","+ colorState/1.9+",1),rgba("+colorState/2+","+ color2State/1.5+","+ color2State/1.3+",0.8))"}}>
+  return <div style={{ height: "",margin: "0rem", background: "linear-gradient(to bottom right,rgba(10,"+color1+","+ color1/1.9+",1),rgba("+color1/2+","+ color2/1.5+","+ color2/1.3+",0.8))"}}>
 
 <div className="namePage" style = {{}}>
   <div style = {{height: "100vh"}}>

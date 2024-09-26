@@ -1,30 +1,8 @@
 import React from 'react'
-import TabButton from './TabButton'
-import { useState, useEffect } from 'react';
-import { Card, Row, Col, Container, Navbar, Image } from 'react-bootstrap';
+import { Card, Row, Col, Container, Image } from 'react-bootstrap';
 import headshot from './headshot.PNG';
 function Contact() {
 
-  const [colorState, setColorState] = useState();
-
-  let color1 = 2;
-  let counter = 1;
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-        if(color1<255 && color1 > 1){
-            color1 = color1 + counter;
-
-        }else{
-            counter = counter * -1;
-            color1 = color1 + counter;
-        }
-        setColorState(color1);
-        },50)
-        return () => clearInterval(timer);
-  }, []);
-
-// xs={5} md={3} lg={2} xl = {2} xxl={1}
 
   return (
     <div className = "basic1" style={{ margin: "0rem",height: "100%", backgroundColor: 'transparent'}}>
