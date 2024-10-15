@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Row, Col, Container, Image } from 'react-bootstrap';
 import headshot from './headshot.PNG';
-function Contact() {
+function About() {
 
 
   return (
@@ -59,16 +59,10 @@ function Contact() {
 
     </div>
       </Container>
-      
 
-    
-
-
-
-      
       <hr></hr>
     </div>
   )
 }
 
-export default Contact
+export default About
