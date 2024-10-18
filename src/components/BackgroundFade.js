@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useBackgroundFade() {
+export function BackgroundFade() {
   const [color1, setColor1State] = useState(151);
   const [color2, setColor2State] = useState(171);
   const [counter, setCounterState] = useState(1);
@@ -24,10 +24,14 @@ export function useBackgroundFade() {
   }, [counter]); // Dependency array includes counter to track direction changes
 
   return (
-    <div background = {"linear-gradient(to bottom right, rgba(10, ${color1}, ${color1 / 2}, 0.8), rgba(${color1/3}, ${color2 / 1.7}, ${color2 / 1.3}, 0.8))"}></div>
+<div
+  style={{
+    background: `linear-gradient(to bottom right, rgba(10, ${color1}, ${color1 / 2}, 0.8), rgba(${color1 / 3}, ${color2 / 1.7}, ${color2 / 1.3}, 0.8))`
+  }}
+></div>
   );
 
 }
 
-export default useBackgroundFade
+export default BackgroundFade
 

@@ -2,12 +2,13 @@
 import React, { useRef, useState } from "react";
 import { Card, Col, Container, Row, Navbar } from "react-bootstrap";
 import About from "./About";
-import { useBackgroundFade } from "./BackgroundFade";
+import { BackgroundFade } from "./BackgroundFade";
 import ParticlesBackground from './ParticlesBackground';
+import { Link } from "react-router-dom";
 
 
 function HomeView() {
-  const { backgroundStyle } = useBackgroundFade();
+  const { backgroundStyle } = BackgroundFade();
   const aboutMeRef = useRef(null);
 
   // Single state for button background colors
@@ -32,9 +33,6 @@ function HomeView() {
     }));
   }
 
-  function goToPortfolio() {
-    window.open("https://github.com/lsimonen1/portfolio");
-  }
 
   function goToResume() {
     window.open(
@@ -43,8 +41,7 @@ function HomeView() {
   }
 
   return (
-    <useBackgroundFade>
-      <div className="namePage" style={{}}>
+      <div className="namePage" style={{background: "black"}}>
         <div style={{ height: "100vh" }}>
           <Navbar bg="transparent" variant="light">
             <Navbar.Collapse className="justify-content-center">
@@ -99,6 +96,8 @@ function HomeView() {
               md={3}
             >
               <Col>
+              <Link to="/portfolio"
+              style={{ textDecoration: "none" }}>
                 <Card
                   style={{
                     border: "2px solid white",
@@ -110,12 +109,13 @@ function HomeView() {
                   }}
                   onMouseEnter={() => handleMouseEnter("button1")}
                   onMouseLeave={() => handleMouseLeave("button1")}
-                  onClick={goToPortfolio}
                 >
                   Portfolio
                 </Card>
+                </Link>
               </Col>
               <Col>
+              <Link to="/resume">
                 <Card
                   style={{
                     border: "2px solid white",
@@ -127,10 +127,10 @@ function HomeView() {
                   }}
                   onMouseEnter={() => handleMouseEnter("button2")}
                   onMouseLeave={() => handleMouseLeave("button2")}
-                  onClick={goToResume}
                 >
                   Resume
                 </Card>
+                </Link>
               </Col>
               <Col>
                 <Card
@@ -161,7 +161,6 @@ function HomeView() {
           <About />
         </Container>
       </div>
-      </useBackgroundFade>
   );
 }
 
