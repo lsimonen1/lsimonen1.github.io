@@ -16,16 +16,16 @@ function About() {
       </Row>
       <Container fluid style={{ margin: "0rem", background: "transparent" }}>
 
-        <Card.Title className='titleName' style={{ marginTop: '0', paddingTop: '0.5rem', paddingBottom: '1rem', fontFamily: "Dosis", fontSize: '5vw' }}>About Me</Card.Title>
-
-        <Image
-          src={headshot} alt="Photo of Lucas"
-          height={300}
-          width={320}
-          style={{ alignSelf: 'center', borderRadius: '25%', marginBottom: '10vh' }}
-        />
+        <Card.Title  style={{ marginTop: '0', paddingTop: '0.5rem', paddingBottom: '1rem', fontFamily: "Dosis", fontSize: '5vw' }}>About Me</Card.Title>
+{
+      //  <Image
+       //   src={headshot} alt="Photo of Lucas"
+       //   height={200}
+       //   width={200}
+       //   style={{ alignSelf: 'center', borderRadius: '25%', marginBottom: '10vh' }}
+       // />
+}
         <Row xs={1} s={1} md={1} lg={3} xl={3} xxl={3}>
-          {/* Repeat the following block for each card */}
           <Col>
             <Card id="aboutmebutton" style={{
               flex: 1, border: "none", color: 'white', backgroundColor: 'transparent',
@@ -33,9 +33,8 @@ function About() {
             }}>
               <Card.Title style={{ paddingTop: '0.5rem' }}> Who am I?</Card.Title>
               <Card.Body>Hello! I am Lucas Simonen, a Computer Science undergraduate student at the University of Wisconsin-Madison,
-                hailing from Waukesha, Wisconsin. As a junior, I am seeking opportunities to apply technical skills in agile software development teams. I have ambition to learn more about software development in new situations and contribute positively to collaborative projects. One of my greatest interests right now is UI design.
-                I'm captivated by the way design can shape user experiences and enhance the functionality of software.
-                Whether it's creating visually appealing interfaces or working on the backend of projects, I really look forward to working on a project that can push my technical knowledge and that other people can use.</Card.Body>
+                I'm from from Waukesha, Wisconsin. As a Senior graduating in December, I am seeking opportunities to apply technical skills in agile software development teams. I have ambition to learn more about software development in new situations and contribute positively to collaborative projects.
+                </Card.Body>
             </Card>
           </Col>
           <Col>

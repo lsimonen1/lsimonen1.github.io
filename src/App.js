@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import HomeView from './components/HomeView';
 import Portfolio from './components/Portfolio';
 import ResumePage from './components/ResumePage';
+import ParticlesBackground from './components/ParticlesBackground';
 function App() {
   return (
 

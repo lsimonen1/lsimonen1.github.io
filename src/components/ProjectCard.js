@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card, Button, Modal } from "react-bootstrap";
 
-function ProjectCard({ title, iframeSrc, description }) {
+function ProjectCard({ title, iframeSrc, description, width, height }) {
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => setShowModal(true);
@@ -33,7 +33,9 @@ function ProjectCard({ title, iframeSrc, description }) {
           margin: "20px",
           borderRadius: "15px",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          backgroundColor: "rgba(255, 255, 255, 0.15)"
+          backgroundColor: "rgba(50, 50, 60, 0.95)",
+          fontFamily: "Dosis"
+
         }}
       >
         <Card.Body>
@@ -58,8 +60,8 @@ function ProjectCard({ title, iframeSrc, description }) {
           </div>
           <iframe
             src={iframeSrc}
-            width="100%"
-            height="300px"
+            width={width}
+            height={height}
             title={title}
             style={{ border: 'none', borderRadius: "10px" }}
           />
@@ -69,10 +71,14 @@ function ProjectCard({ title, iframeSrc, description }) {
       {/* Modal for displaying additional info */}
       <Modal show={showModal} onHide={handleCloseModal} centered>
         <Modal.Header closeButton>
-          <Modal.Title>{title}</Modal.Title>
+          <Modal.Title style={{
+                fontFamily: "Dosis"
+              }}>{title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>{description}</p>
+          <p style={{
+                fontFamily: "Dosis"
+              }}>{description}</p>
         </Modal.Body>
       </Modal>
     </>

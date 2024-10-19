@@ -1,24 +1,22 @@
-
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useMemo } from "react";
 import { Card, Col, Container, Row, Navbar } from "react-bootstrap";
 import About from "./About";
 import { BackgroundFade } from "./BackgroundFade";
 import ParticlesBackground from './ParticlesBackground';
 import { Link } from "react-router-dom";
 
+const MemoizedParticlesBackground = React.memo(ParticlesBackground);
 
 function HomeView() {
   const { backgroundStyle } = BackgroundFade();
   const aboutMeRef = useRef(null);
 
-  // Single state for button background colors
   const [buttonColors, setButtonColors] = useState({
     button1: "transparent",
     button2: "transparent",
     button3: "transparent",
   });
 
-  // Single function to handle mouse enter and leave
   function handleMouseEnter(button) {
     setButtonColors((prevColors) => ({
       ...prevColors,
@@ -33,16 +31,11 @@ function HomeView() {
     }));
   }
 
-
-  function goToResume() {
-    window.open(
-      "https://drive.google.com/file/d/1lsfyvSJ0GRxEWMkKWiImgSGXHmt2ZNf5/view?usp=sharing"
-    );
-  }
-
   return (
-      <div className="namePage" style={{background: "black"}}>
-        <div style={{ height: "100vh" }}>
+    <div className="namePage" style={{ background: "black", position: "relative" }}>
+      <MemoizedParticlesBackground />
+      
+      <div style={{ height: "100vh", position: "relative", zIndex: 1 }}>
           <Navbar bg="transparent" variant="light">
             <Navbar.Collapse className="justify-content-center">
               <Navbar.Text>
@@ -115,7 +108,8 @@ function HomeView() {
                 </Link>
               </Col>
               <Col>
-              <Link to="/resume">
+              <Link to="/resume"
+              style={{ textDecoration: "none" }}>
                 <Card
                   style={{
                     border: "2px solid white",
@@ -156,12 +150,15 @@ function HomeView() {
               </Col>
             </Row>
           </Container>
-        </div>
-        <Container ref={aboutMeRef} fluid style={{ width: "80vw" }}>
-          <About />
-        </Container>
+
+
       </div>
+      
+      <Container ref={aboutMeRef} fluid style={{ width: "80vw" }}>
+        <About />
+      </Container>
+    </div>
   );
 }
 
-export default HomeView;
+export default React.memo(HomeView);
