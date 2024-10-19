@@ -33,7 +33,7 @@ function ProjectCard({ title, iframeSrc, description, width, height }) {
           margin: "20px",
           borderRadius: "15px",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          backgroundColor: "rgba(50, 50, 60, 0.95)",
+          backgroundColor: "rgba(50, 70, 120, 0.8)",
           fontFamily: "Dosis"
 
         }}
@@ -41,6 +41,7 @@ function ProjectCard({ title, iframeSrc, description, width, height }) {
         <Card.Body>
           <div className="justify-content-center">
             <Card.Title style={{ color: "white", fontFamily: "Dosis", textAlign: "center" }}>{title}</Card.Title>
+            <div className="d-flex justify-content-center">
             <Button
               variant="primary"
               onClick={handleOpenModal}
@@ -50,14 +51,16 @@ function ProjectCard({ title, iframeSrc, description, width, height }) {
                 backgroundColor: buttonColors.button,
                 margin: "0.5rem",
                 padding: "0.5rem",
-                fontFamily: "Dosis",
+                fontFamily: "Dosis"
               }}
               onMouseEnter={() => handleMouseEnter()}
               onMouseLeave={() => handleMouseLeave()}
             >
               Read More
             </Button>
+            </div>
           </div>
+          <div className="d-flex justify-content-center">
           <iframe
             src={iframeSrc}
             width={width}
@@ -65,6 +68,7 @@ function ProjectCard({ title, iframeSrc, description, width, height }) {
             title={title}
             style={{ border: 'none', borderRadius: "10px" }}
           />
+          </div>
         </Card.Body>
       </Card>
 

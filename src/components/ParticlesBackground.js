@@ -36,7 +36,7 @@ const ParticlesBackground = (props) => {
           "color": {
             "value": "#000"
           },
-          "opacity": 1
+          "opacity": 0.5
         },
         "enable": true
       },

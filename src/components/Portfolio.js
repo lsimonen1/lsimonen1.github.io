@@ -32,11 +32,13 @@ function Portfolio() {
   }
 
   return (
-    <div className="namePage" style={{ background: "black", padding: "20px", position: "relative" }}>
+    <div style={{ background: "black", minHeight: "100vh", position: "relative" }}>
       {/* Particle Background */}
       <MemoizedParticlesBackground />
 
-      <div style={{ position: "relative", zIndex: 2 }}>
+      {/* Content Overlay */}
+      <div style={{ position: "relative", zIndex: 1 }}>
+        {/* Navbar for links */}
         <Navbar bg="transparent" variant="light">
           <Navbar.Collapse className="justify-content-center">
             <Navbar.Text>
@@ -98,8 +100,8 @@ function Portfolio() {
             <Col md={6} lg={6}>
               <ProjectCard
                 title="Java Script Graphics Town Project"
-                iframeSrc="portfolio/graphicsTown/for_students/final-grtown.html"
-                description="This project for my Computer Graphics class allowed me to dive into 3D modeling and animation using Three.js. I brought a town to life by creating detailed buildings, trees, and various elements, all while incorporating realistic animations to make it feel vibrant and dynamic. It was an incredibly rewarding experience that sharpened my skills in 3D design. If I were to revisit the project, I'd explore more online resources for object creation (I manually created all of the arrays for each face of each object which was very time consuming), which would free up time to experiment with exciting features like shaders. Overall, this project was a fantastic opportunity to grow creatively and technically."
+                iframeSrc="lsimonen1.github.io/portfolio/graphicsTown/for_students/final-grtown.html"
+                description="This project for my Computer Graphics class allowed me to do some 3D modeling and animation using Three.js. I brought a small intersection to life by creating buildings, trees, and vehicles, all while incorporating animations to make it feel more realistic. I thought it was an incredibly rewarding experience that sharpened my skills in 3D design. If I were to revisit the project, I'd explore more online resources for object creation (I manually created all of the arrays for each face of each object which was very time consuming), which would free up time to experiment with exciting features like shaders and a more complex city structure. Overall, this project was a fantastic opportunity to grow creatively and technically."
                 width="100%"
                 height="300px"
               />
@@ -116,8 +118,8 @@ function Portfolio() {
             <Col md={6} lg={6}>
               <ProjectCard
                 title="Fake Movie Poster"
-                iframeSrc="https://github.com/lsimonen1/lsimonen1.github.io/blob/b1c56d5bd2447997fa0380e65377a6fc1794c3d0/portfolio/Stealinginthewest.html"
-                description="This movie poster was crafted during my sophomore year as a showcase of my Photoshop skills. I combined various media from different sources to create a fictional western film. While the composition, layout, and effects are original, I sourced images of actors and money to enhance the design. The inspiration for this poster came from iconic movie posters like 'A Fistful of Dollars' and other modular designs, blending classic elements with my own flair."
+                iframeSrc="lsimonen1.github.io/blob/b1c56d5bd2447997fa0380e65377a6fc1794c3d0/portfolio/Stealinginthewest.html"
+                description="This movie poster was crafted during my sophomore year as a showcase of my Photoshop skills. I combined various media from different sources to create a fictional western film. While the composition, layout, and effects are original, I sourced images of actors and money to enhance the design. The inspiration for this poster came from iconic movie posters like 'A Fistful of Dollars' and other modular designs."
                 width="60%"
                 height="450px"
               />
