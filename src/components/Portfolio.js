@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
-import { Card, Col, Container, Row, Navbar, Button } from "react-bootstrap";
-import { BackgroundFade } from "./BackgroundFade";
+import React, { useState } from "react";
+import { Col, Container, Row, Navbar, Button } from "react-bootstrap";
+// import { BackgroundFade } from "./BackgroundFade";
 import ProjectCard from "./ProjectCard";
 import { useNavigate } from "react-router-dom";
 import ParticlesBackground from "./ParticlesBackground";
@@ -8,7 +8,7 @@ import ParticlesBackground from "./ParticlesBackground";
 const MemoizedParticlesBackground = React.memo(ParticlesBackground);
 
 function Portfolio() {
-  const { backgroundStyle } = BackgroundFade();
+  // const { backgroundStyle } = BackgroundFade();
   const navigate = useNavigate(); // Initialize the navigate hook
 
   const [buttonColors, setButtonColors] = useState({
@@ -100,7 +100,7 @@ function Portfolio() {
             <Col md={6} lg={6}>
               <ProjectCard
                 title="Java Script Graphics Town Project"
-                iframeSrc="lsimonen1.github.io/portfolio/graphicsTown/for_students/final-grtown.html"
+                iframeSrc="https://lsimonen1.github.io/portfoliofile1/"
                 description="This project for my Computer Graphics class allowed me to do some 3D modeling and animation using Three.js. I brought a small intersection to life by creating buildings, trees, and vehicles, all while incorporating animations to make it feel more realistic. I thought it was an incredibly rewarding experience that sharpened my skills in 3D design. If I were to revisit the project, I'd explore more online resources for object creation (I manually created all of the arrays for each face of each object which was very time consuming), which would free up time to experiment with exciting features like shaders and a more complex city structure. Overall, this project was a fantastic opportunity to grow creatively and technically."
                 width="100%"
                 height="300px"
@@ -118,7 +118,7 @@ function Portfolio() {
             <Col md={6} lg={6}>
               <ProjectCard
                 title="Fake Movie Poster"
-                iframeSrc="lsimonen1.github.io/blob/b1c56d5bd2447997fa0380e65377a6fc1794c3d0/portfolio/Stealinginthewest.html"
+                iframeSrc="https://lsimonen1.github.io/portfolioFile2/"
                 description="This movie poster was crafted during my sophomore year as a showcase of my Photoshop skills. I combined various media from different sources to create a fictional western film. While the composition, layout, and effects are original, I sourced images of actors and money to enhance the design. The inspiration for this poster came from iconic movie posters like 'A Fistful of Dollars' and other modular designs."
                 width="60%"
                 height="450px"

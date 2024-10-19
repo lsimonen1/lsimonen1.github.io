@@ -11,10 +11,8 @@ function About() {
       <div className="aboutMeDiv">
 
       </div>
-      <Row>
-
-      </Row>
-      <Container fluid style={{ margin: "0rem", background: "black" }}>
+    
+      <Container fluid style={{ margin: "0rem", background: "transparent" }}>
 
 {
       //  <Image
@@ -26,7 +24,7 @@ function About() {
 }
 <Row xs={1} s={1} md={1} lg={3} xl={3} xxl={3}>
 <Col></Col>
-<Col><Card.Title  style={{ marginTop: '0', padding: '2rem', paddingBottom: '1rem', fontFamily: "Dosis", fontSize: '5vw', zIndex:1}}>About Me</Card.Title>
+<Col><Card.Title  style={{ marginTop: '0', padding: '2rem', paddingBottom: '1rem', fontFamily: "Dosis", fontSize: '5vw', zIndex:1, color: 'white'}}>About Me</Card.Title>
 </Col>
 <Col></Col>
 
