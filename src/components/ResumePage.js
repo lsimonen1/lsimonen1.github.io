@@ -96,7 +96,7 @@ function ResumePage() {
           <Card style={{ width: "80%", background: "rgba(255, 255, 255, 0.1)", color: "white" }}>
             <Card.Body>
               <iframe
-                src="/portfolio/LUCAS_SIMONEN_RESUMECS_09242024.pdf"
+                src="lsimonen1.github.io/src/components/portfolio/LUCAS_SIMONEN_RESUMECS_09242024.pdf"
                 title="Resume"
                 style={{ width: "100%", height: "1200px", border: "none" }}
               ></iframe>
