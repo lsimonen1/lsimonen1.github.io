@@ -97,6 +97,19 @@ function Portfolio() {
 
         <Container>
           <Row className="justify-content-center">
+          <Col md={6} lg={6}>
+              <ProjectCard
+                title="Demo Video of KIKOFF"
+                iframeSrc="https://www.youtube.com/embed/1OO3XmG2GDQ?si=4wPbvzy3ddFT0pMj"
+                description="Here is a demo video of my team’s app, KIKOFF, narrated by one of our team members, Sarah. The app was designed to help people play sports with one another without the need to wait or pay for an intramural league. The core idea was to allow users to find and join sports games in a way similar to online video game matchmaking. This approach ensures a seamless and fair matchmaking experience for users playing sports that don’t require a referee, such as tennis, basketball, or spikeball.
+The application was developed in React Native with Google Firebase as our database and API solution. My key responsibilities in the project included:
+* Designing and implementing Firebase-powered backend functionalities to efficiently manage user data storage and retrieval.
+* Building interactive chat functionalities, enabling real-time communication between users through Firebase API calls.
+* Developing the user events page with seamless UI/UX integration in React Native, allowing users to create and view events and chats effortlessly."
+                width="100%"
+                height="300px"
+              />
+            </Col>
             <Col md={6} lg={6}>
               <ProjectCard
                 title="Java Script Graphics Town Project"
