@@ -37,8 +37,8 @@ function About() {
               margin: "0.5rem", pasdding: "0.5rem", fontFamily: "Dosis"
             }}>
               <Card.Title style={{ paddingTop: '0.5rem' }}> Who am I?</Card.Title>
-              <Card.Body>Hello! I am Lucas Simonen, a Computer Science undergraduate student at the University of Wisconsin-Madison,
-                I'm from Waukesha, Wisconsin. As a Senior graduating in December, I am seeking opportunities to apply technical skills in agile software development teams. I have ambition to learn more about software development in new situations and contribute positively to collaborative projects.
+              <Card.Body>Hello! My name is Lucas Simonen, and I hold a Bachelor of Science degree in Computer Science from the University of Wisconsin-Madison.
+                I'm from Waukesha, Wisconsin. As a new gratuate as of December 2024, I am seeking opportunities to apply technical skills in agile software development teams. I have ambition to learn more about software development in new situations and contribute positively to collaborative projects.
                 </Card.Body>
             </Card>
             
@@ -49,7 +49,7 @@ function About() {
               margin: "0.5rem", pasdding: "0.5rem", fontFamily: "Dosis"
             }}>
               <Card.Title style={{ paddingTop: '0.5rem' }}> Technical Skills</Card.Title>
-              <Card.Body>Java (Intermediate), JavaScript (Intermediate), React/React Native (Intermediate), SQL (Beginner), HTML (Advanced), CSS(Intermediate), VSCode (Advanced), Git (Intermediate), Photoshop (Advanced), Lightroom (Advanced), Premiere Pro (Advanced), Illustrator (Intermediate), After Effects (Intermediate) and Dream Weaver (Intermediate).
+              <Card.Body>Java, JavaScript, Python, Vite, React/React Native, SQL, HTML, CSS, VSCode, Git, Photoshop, Lightroom, Premiere Pro, Illustrator, After Effects, and Dream Weaver.
               </Card.Body>
             </Card>
           </Col>
