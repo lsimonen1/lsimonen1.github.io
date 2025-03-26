@@ -1,93 +1,117 @@
 import React, { useState } from "react";
-import { Card, Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 
 function ProjectCard({ title, iframeSrc, description, width, height }) {
   const [showModal, setShowModal] = useState(false);
+  const [buttonColor, setButtonColor] = useState("transparent");
 
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
-  const [buttonColors, setButtonColors] = useState({
-    button: "transparent",
-  });
-
-  function handleMouseEnter() {
-    setButtonColors((prevColors) => ({
-      ...prevColors,
-      button: "rgb(228, 238, 243, 0.5)", // Update button color
-    }));
-  }
-
-  // Handle mouse leave
-  function handleMouseLeave() {
-    setButtonColors((prevColors) => ({
-      ...prevColors,
-      button: "transparent", // Reset button color
-    }));
-  }
-
   return (
     <>
-      <Card
+      {/* Project Card */}
+      <div
         style={{
-          margin: "20px",
-          borderRadius: "15px",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          backgroundColor: "rgba(50, 70, 120, 0.8)",
-          fontFamily: "Dosis"
-
+          border: "2px solid white",
+          borderRadius: "5px",
+          padding: "1rem",
+          marginBottom: "2rem",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          color: "white",
+          fontFamily: "'Silkscreen', cursive",
         }}
       >
-        <Card.Body>
-          <div className="justify-content-center">
-            <Card.Title style={{ color: "white", fontFamily: "Dosis", textAlign: "center" }}>{title}</Card.Title>
-            <div className="d-flex justify-content-center">
-            <Button
-              variant="primary"
-              onClick={handleOpenModal}
-              style={{
-                border: "2px solid white",
-                color: "white",
-                backgroundColor: buttonColors.button,
-                margin: "0.5rem",
-                padding: "0.5rem",
-                fontFamily: "Dosis"
-              }}
-              onMouseEnter={() => handleMouseEnter()}
-              onMouseLeave={() => handleMouseLeave()}
-            >
-              Read More
-            </Button>
-            </div>
-          </div>
-          <div className="d-flex justify-content-center">
+        {/* Title */}
+        <h2
+          style={{
+            fontSize: "clamp(1rem, 2vw, 1.5rem)",
+            marginBottom: "1rem",
+            borderBottom: "1px solid white",
+            paddingBottom: "0.5rem",
+          }}
+        >
+          {title}
+        </h2>
+
+        {/* Project Embed */}
+        <div style={{ 
+          display: "flex", 
+          justifyContent: "center",
+          marginBottom: "1rem"
+        }}>
           <iframe
             src={iframeSrc}
             width={width}
             height={height}
             title={title}
-            style={{ border: 'none', borderRadius: "10px" }}
+            style={{ 
+              border: '2px solid white',
+              borderRadius: "5px"
+            }}
           />
-          </div>
-        </Card.Body>
-      </Card>
+        </div>
 
-      {/* Modal for displaying additional info */}
-      <Modal show={showModal} onHide={handleCloseModal} centered>
-        <Modal.Header closeButton>
-          <Modal.Title style={{
-                fontFamily: "Dosis"
-              }}>{title}</Modal.Title>
+        {/* Read More Button */}
+        <div style={{ textAlign: "center" }}>
+          <button
+            onClick={handleOpenModal}
+            style={{
+              border: "2px solid white",
+              color: "white",
+              backgroundColor: buttonColor,
+              padding: "0.5rem 1rem",
+              fontFamily: "'Silkscreen', cursive",
+              fontSize: "clamp(0.8rem, 1.5vw, 1rem)",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+            }}
+            onMouseEnter={() => setButtonColor("rgba(255, 255, 255, 0.2)")}
+            onMouseLeave={() => setButtonColor("transparent")}
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+
+      {/* Modal */}
+      <Modal 
+        show={showModal} 
+        onHide={handleCloseModal} 
+        centered
+        contentStyle={{
+          backgroundColor: "black",
+          color: "white",
+          border: "2px solid white",
+          fontFamily: "'Silkscreen', cursive",
+        }}
+      >
+        <Modal.Header closeButton style={{ borderBottom: "1px solid white" }}>
+          <Modal.Title style={{ fontFamily: "'Silkscreen', cursive" }}>
+            {title}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p style={{
-                fontFamily: "Dosis"
-              }}>{description}</p>
+          <div style={{ whiteSpace: "pre-line" }}>{description}</div>
         </Modal.Body>
+        <Modal.Footer style={{ borderTop: "1px solid white" }}>
+          <button
+            onClick={handleCloseModal}
+            style={{
+              border: "2px solid white",
+              color: "white",
+              backgroundColor: "transparent",
+              padding: "0.25rem 0.75rem",
+              fontFamily: "'Silkscreen', cursive",
+              cursor: "pointer",
+            }}
+          >
+            Close
+          </button>
+        </Modal.Footer>
       </Modal>
     </>
   );
 }
-
 
 export default ProjectCard;

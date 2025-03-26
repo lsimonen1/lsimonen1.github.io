@@ -1,133 +1,44 @@
-body {
-  font-family: 'rockwell';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
-.namePage{
-  text-align: center;
-}
-
-.PPageElement{
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
-  text-align: center;
-  margin: 0rem;
+/* Bio text responsive behavior */
+.bioText {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  max-width: 40vw;
+  min-width: 250px;
   padding: 1rem;
-  
-  height: 25rem;
-  width: 20rem;
-  background-color:#a32767;
-}
-
-.TabButton{
-  margin: 1rem;
-  
-}
-
-.titleMargin{
-  padding: 0;
-  margin:0;
-}
-
-page-container {
-  min-height: 100%;
-  position: relative;
-}
-
-/* Navbar (Footer) styles */
-.navbar {
-  color: antiquewhite;
-}
-
-.navbar-divider {
-  margin: 0 5px;
-  color: antiquewhite;
-}
-
-.basic{
-  font-family: 'Rubik', sans-serif;
-  text-align: center;
-  background-color: #5E0035;
-  color: antiquewhite;
-  display: flex;
-  
-  height: 100vh;
-}
-
-.basic1{
-  font-family: 'Rubik', sans-serif;
-  text-align: center;
-  background-color: #5E0035;
-  color: antiquewhite;
-
-  height: 100vh;
-}
-
-.backgroundslate{
-  background-color:#5E0035;
-  display: flex;
-  
-}
-
-.button{
-  background-color:transparent;
-  border: none;
-  color:rgb(228, 238, 243);  
+  color: white;
+  font-family: 'Silkscreen', cursive;
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
   text-align: left;
-  margin: 0;
-  padding: 0;
-  font-family: 'Dosis', sans-serif;
-  font-family: 'Rubik', sans-serif;
-  font-size: 1.4rem;
-  
-
+  transition: all 0.3s ease;
 }
-.topHalf{
-  display: flex;
-  
+
+@media (max-width: 1024px) {
+  .bioText {
+    max-width: 60vw;
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
   }
-
-.aboutMeDiv{
-    display: flex;
-    
-    
-    }
-
-.titleName{
-  font-family: 'Dosis', sans-serif;
-  font-family: 'Rubik', sans-serif;
-  margin-top: 30vh;
-  margin-bottom: 0;
-font-size: 7vw;
-padding-bottom: 0;
-margin-bottom: 0;
-color:rgb(228, 238, 243, 0.91);  
-
 }
 
-.majorName{
-  font-family: 'Dosis', sans-serif;
-  font-family: 'Rubik', sans-serif;
-padding-top: 0;
-margin-top: 0;
-color:rgb(228, 238, 243, 0.8);  
-
+@media (max-width: 768px) {
+  .bioText {
+    max-width: 80vw;
+    right: auto;
+    left: 0rem;
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
+    text-align: left;
+    padding: 0.5rem;
+  }
+  .navLinks{
+    left: 0rem;
+  }
 }
 
-.aboutMeSection{
-  margin-top: 0;
-  padding-top: 0;
-  display:flex;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  text-align: center;  
-  padding-top: 3rem;
-
+@media (max-width: 480px) {
+  .bioText {
+    max-width: 90vw;
+    font-size: 0.7rem;
+    min-width: unset;
+    width: calc(100% - 2rem);
+  }
 }

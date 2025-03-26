@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import HomeView from './components/HomeView';
 import Portfolio from './components/Portfolio';
 import ResumePage from './components/ResumePage';
+import Contact from './components/Contact'
 import ParticlesBackground from './components/ParticlesBackground';
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<HomeView />} />
           <Route path="/resume" element={<ResumePage />}></Route>
           <Route path="/portfolio" element={<Portfolio />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
       </Routes>
       </div>
   );

@@ -1,8 +1,7 @@
 import React from "react";
 import ParticlesBackground from "./ParticlesBackground";
-import { Link } from "react-router-dom";
 
-function HomeView() {
+function Contact() {
   return (
     <div
       className="namePage"
@@ -19,9 +18,8 @@ function HomeView() {
     >
       <ParticlesBackground />
       
-      {/* Main content container with border */}
+      {/* Main content container with border (matches home page) */}
       <div
-        className="contentContainer"
         style={{
           position: "relative",
           height: "calc(100vh - 6rem)",
@@ -30,13 +28,13 @@ function HomeView() {
           border: "0.3rem solid white",
           padding: "0rem",
           boxSizing: "border-box",
-          overflow: "auto", // Allows scrolling for portfolio content
         }}
       >
-        {/* Title and Links Container (same as home) */}
+        {/* Title and Links Container */}
         <div style={{
           position: "sticky", // Sticks to top when scrolling
           top: 0,
+          backgroundColor: "black",
           zIndex: 2,
           padding: "1rem",
           paddingLeft: "0rem",
@@ -64,7 +62,7 @@ function HomeView() {
             <a
               href="/"
               style={{
-                color: "#00aaff",
+                color: "white",
                 fontSize: "clamp(1rem, 3vw, 1.5rem)",
                 fontFamily: "'Silkscreen', cursive",
                 textDecoration: "none",
@@ -122,7 +120,7 @@ function HomeView() {
             <a
               href="/contact"
               style={{
-                color: "white",
+                color: "#00aaff",
                 fontSize: "clamp(1rem, 3vw, 1.5rem)",
                 fontFamily: "'Silkscreen', cursive",
                 textDecoration: "none",
@@ -142,30 +140,84 @@ function HomeView() {
             </a>
           </nav>
         </div>
-        {/* Bio Text */}
+
+        {/* Contact Content */}
         <div
-          className="bioText"
           style={{
-            position: "absolute",
-            bottom: "1rem",
-            right: "1rem",
-            maxWidth: "40vw",
-            minWidth: "250px",
-            padding: "1rem",
             color: "white",
             fontFamily: "'Silkscreen', cursive",
-            fontSize: "clamp(0.7rem, 1.2vw, 1rem)",
-            textAlign: "left",
+            fontSize: "clamp(0.8rem, 1.5vw, 1.2rem)",
+            maxWidth: "600px",
+            marginLeft: "1rem",
+            borderTop: "1px solid white",
+            paddingTop: "1rem",
           }}
         >
-          <p>
-            Hello! My name is Lucas Simonen, and I hold a B.S. in Computer Science from the University of Wisconsin-Madison. As a new graduate since December 2024,
-            I’m passionate about applying my programming and development expertise across diverse technical stacks and project domains. I thrive in collaborative environments where I can both contribute my skills and continuously grow by tackling new challenges in software development.
-          </p>
+          <div style={{ marginBottom: "1.5rem" }}>
+            <h2 style={{ fontSize: "clamp(1.2rem, 2vw, 1.8rem)" }}>Get in Touch</h2>
+            <p>Feel free to reach out for opportunities or collaborations!</p>
+          </div>
+
+          <div style={{ marginBottom: "1.5rem" }}>
+            <h3 style={{ fontSize: "clamp(1rem, 1.8vw, 1.5rem)" }}>Email</h3>
+            <a 
+              href="mailto:lucasimonen@gmail.com" 
+              style={{ 
+                color: "#00aaff",
+                textDecoration: "none",
+                ':hover': {
+                  textDecoration: "underline"
+                }
+              }}
+            >
+              lucasimonen@gmail.com
+            </a>
+          </div>
+
+          <div style={{ marginBottom: "1.5rem" }}>
+            <h3 style={{ fontSize: "clamp(1rem, 1.8vw, 1.5rem)" }}>Phone</h3>
+            <p>(262) 646-0833</p>
+          </div>
+
+          <div style={{ marginBottom: "1.5rem" }}>
+            <h3 style={{ fontSize: "clamp(1rem, 1.8vw, 1.5rem)" }}>LinkedIn</h3>
+            <a 
+              href="https://www.linkedin.com/in/lucas-simonen-912801261/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ 
+                color: "#00aaff",
+                textDecoration: "none",
+                ':hover': {
+                  textDecoration: "underline"
+                }
+              }}
+            >
+              linkedin.com/in/lucas-simonen-912801261/
+            </a>
+          </div>
+
+          <div>
+            <h3 style={{ fontSize: "clamp(1rem, 1.8vw, 1.5rem)" }}>Handshake</h3>
+            <a 
+              href="https://wisc.joinhandshake.com/profiles/sgn6sw" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ 
+                color: "#00aaff",
+                textDecoration: "none",
+                ':hover': {
+                  textDecoration: "underline"
+                }
+              }}
+            >
+              wisc.joinhandshake.com/profiles/sgn6sw
+            </a>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default React.memo(HomeView);
+export default Contact;

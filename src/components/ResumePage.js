@@ -1,111 +1,230 @@
-import React, { useState } from "react";
-import { Card, Container, Navbar, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import ParticlesBackground from "./ParticlesBackground";
 
-const MemoizedParticlesBackground = React.memo(ParticlesBackground);
-
 function ResumePage() {
-  const navigate = useNavigate();
-
-  const handleBackClick = () => {
-    navigate("/"); // Navigate back to home
-  };
-
-  const [buttonColors, setButtonColors] = useState({
-    button: "transparent",
-  });
-
-  function handleMouseEnter() {
-    setButtonColors({
-      button: "rgb(228, 238, 243, 0.5)", // Update button color
-    });
-  }
-
-  function handleMouseLeave() {
-    setButtonColors({
-      button: "transparent", // Reset button color
-    });
-  }
-
   return (
-    <div style={{ background: "black", minHeight: "100vh", position: "relative" }}>
-      {/* Particle Background */}
-      <MemoizedParticlesBackground />
-
-      {/* Content Overlay */}
-      <div style={{ position: "relative", zIndex: 1 }}>
-        {/* Navbar for links */}
-        <Navbar bg="transparent" variant="light">
-          <Navbar.Collapse className="justify-content-center">
-            <Navbar.Text>
-              <a
-                style={{ color: "white", fontFamily: "Dosis" }}
-                href="https://www.linkedin.com/in/lucas-simonen-912801261/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
-            </Navbar.Text>
-            <span className="navbar-divider">|</span>
-            <Navbar.Text>
-              <a
-                style={{ color: "white", fontFamily: "Dosis" }}
-                href="https://wisc.joinhandshake.com/stu/users/32058183/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Handshake.com
-              </a>
-            </Navbar.Text>
-            <span className="navbar-divider">|</span>
-            <Navbar.Text style={{ color: "white", fontFamily: "Dosis" }}>
-              Phone: (262) 646-0833
-            </Navbar.Text>
-            <span className="navbar-divider">|</span>
-            <Navbar.Text style={{ color: "white", fontFamily: "Dosis" }}>
-              Email: Lsimonen@wisc.edu
-            </Navbar.Text>
-          </Navbar.Collapse>
-        </Navbar>
-
-        <h1 style={{ color: "white", fontFamily: "Dosis", textAlign: "center" }}>
-          My Resume
-        </h1>
-
-        <div style={{ position: "absolute", top: "20px", left: "20px" }}>
-          <Button
-            onClick={handleBackClick}
+    <div
+      className="namePage"
+      style={{
+        position: "relative",
+        height: "100vh",
+        width: "100vw",
+        display: "flex",
+        alignItems: "flex-start",
+        padding: "0",
+        margin: "0",
+        overflow: "hidden",
+      }}
+    >
+      <ParticlesBackground />
+      
+      {/* Main content container with border */}
+      <div
+        className="contentContainer"
+        style={{
+          position: "relative",
+          height: "calc(100vh - 6rem)",
+          width: "calc(100vw - 6rem)",
+          margin: "3rem",
+          border: "0.3rem solid white",
+          padding: "0rem",
+          boxSizing: "border-box",
+          overflow: "auto", // Allows scrolling for portfolio content
+        }}
+      >
+        {/* Title and Links Container (same as home) */}
+        <div style={{
+          position: "sticky", // Sticks to top when scrolling
+          top: 0,
+          zIndex: 2,
+          padding: "1rem",
+          paddingLeft: "0rem",
+        }}>
+          <h1
+            className="titleName"
             style={{
-              border: "2px solid white",
               color: "white",
-              backgroundColor: buttonColors.button,
-              margin: "0.5rem",
-              padding: "0.5rem",
-              fontFamily: "Dosis",
+              paddingLeft: "0.5rem",
+              fontSize: "clamp(2rem, 5vw, 5rem)",
+              fontWeight: "300",
+              fontFamily: "'Silkscreen', cursive",
+              margin: "0",
+              marginBottom: "0rem",
             }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
           >
-            Back to Home
-          </Button>
+            Lucas Simonen
+          </h1>
+
+          <nav className="navLinks"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}>
+            <a
+              href="/"
+              style={{
+                color: "white",
+                fontSize: "clamp(1rem, 3vw, 1.5rem)",
+                fontFamily: "'Silkscreen', cursive",
+                textDecoration: "none",
+                padding: "0.5rem",
+                paddingLeft: "1rem",
+                paddingBottom: "0rem",
+                paddingTop: "0rem",
+                transition: "all 0.3s ease",
+                ':hover': {
+                  color: "#ff5500",
+                  fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
+                  textShadow: "0 0 8px rgba(255,85,0,0.5)"
+                }
+              }}
+            >
+              Home
+            </a>
+            <a
+              href="/portfolio"
+              style={{
+                color: "white", // Highlight current page
+                fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
+                fontFamily: "'Silkscreen', cursive",
+                textDecoration: "none",
+                padding: "0.5rem",
+                paddingLeft: "1rem",
+                paddingBottom: "0rem",
+                paddingTop: "0rem",
+                textShadow: "0 0 8px rgba(0,170,255,0.5)"
+              }}
+            >
+              Projects
+            </a>
+            <a
+              href="/resume"
+              style={{
+                color: "#00aaff",
+                fontSize: "clamp(1rem, 3vw, 1.5rem)",
+                fontFamily: "'Silkscreen', cursive",
+                textDecoration: "none",
+                padding: "0.5rem",
+                paddingLeft: "1rem",
+                paddingBottom: "0rem",
+                paddingTop: "0rem",
+                transition: "all 0.3s ease",
+                ':hover': {
+                  color: "#00ffaa",
+                  fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
+                  textShadow: "0 0 8px rgba(0,255,170,0.5)"
+                }
+              }}
+            >
+              Resume
+            </a>
+            <a
+              href="/contact"
+              style={{
+                color: "white",
+                fontSize: "clamp(1rem, 3vw, 1.5rem)",
+                fontFamily: "'Silkscreen', cursive",
+                textDecoration: "none",
+                padding: "0.5rem",
+                paddingLeft: "1rem",
+                paddingBottom: "0rem",
+                paddingTop: "0rem",
+                transition: "all 0.3s ease",
+                ':hover': {
+                  color: "#ff00aa",
+                  fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
+                  textShadow: "0 0 8px rgba(255,0,170,0.5)"
+                }
+              }}
+            >
+              Contact
+            </a>
+          </nav>
         </div>
 
-        <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: "80vh" }}>
-          <Card style={{ width: "80%", background: "rgba(255, 255, 255, 0.1)", color: "white" }}>
-            <Card.Body>
-              <iframe
-                src="https://lsimonen1.github.io/resumeFile/"
-                title="Resume"
-                style={{ width: "100%", height: "1220px", border: "none" }}
-              ></iframe>
-            </Card.Body>
-          </Card>
-        </Container>
+        {/* Resume Container */}
+        <div
+          style={{
+            position: "absolute",
+            top: "12rem", // Adjusted to account for header
+            right: "2rem",
+            width: "60%",
+            height: "calc(100% - 14rem)",
+            border: "2px solid white",
+            borderRadius: "5px",
+            overflow: "hidden",
+          }}
+          className="resume-container"
+        >
+          <iframe
+            src="https://lsimonen1.github.io/resumeFile/"
+            title="Resume"
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "none",
+              // Disable browser controls
+              scrolling: "no",
+              margin: "0",
+              padding: "0",
+              // Disable zoom/scale controls
+              sandbox: "allow-scripts allow-same-origin",
+              // Disable text selection
+              userSelect: "none",
+              // Disable iframe scrollbars
+              overflow: "hidden",
+            }}
+          />
+        </div>
+
+        {/* Responsive CSS */}
+        <style>{`
+          /* Mobile styles */
+          @media (max-width: 768px) {
+            .contentContainer {
+              overflow: auto;
+            }
+            .resume-container {
+              position: relative !important;
+              width: calc(100% - 2rem) !important;
+              height: 70vh !important;
+              top: auto !important;
+              right: auto !important;
+              margin: 1rem !important;
+            }
+            iframe {
+              -webkit-overflow-scrolling: touch;
+            }
+          }
+          
+          /* Disable scrollbars globally */
+          ::-webkit-scrollbar {
+            display: none;
+          }
+          body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+        `}</style>
       </div>
     </div>
   );
 }
+
+// Shared styles
+const navLinkStyle = {
+  color: "white",
+  fontSize: "clamp(1rem, 3vw, 1.5rem)",
+  fontFamily: "'Silkscreen', cursive",
+  textDecoration: "none",
+  padding: "0.5rem",
+  paddingLeft: "1rem",
+  transition: "all 0.3s ease",
+  ':hover': {
+    color: "#ff5500",
+    fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
+    textShadow: "0 0 8px rgba(255,85,0,0.5)"
+  }
+};
 
 export default ResumePage;
