@@ -1,6 +1,6 @@
 import React from "react";
 import ParticlesBackground from "./ParticlesBackground";
-
+import { Link } from "react-router-dom";
 function Contact() {
   return (
     <div
@@ -55,90 +55,90 @@ function Contact() {
           </h1>
 
           <nav className="navLinks"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}>
-            <a
-              href="/"
-              style={{
-                color: "white",
-                fontSize: "clamp(1rem, 3vw, 1.5rem)",
-                fontFamily: "'Silkscreen', cursive",
-                textDecoration: "none",
-                padding: "0.5rem",
-                paddingLeft: "1rem",
-                paddingBottom: "0rem",
-                paddingTop: "0rem",
-                transition: "all 0.3s ease",
-                ':hover': {
-                  color: "#ff5500",
-                  fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
-                  textShadow: "0 0 8px rgba(255,85,0,0.5)"
-                }
-              }}
-            >
-              Home
-            </a>
-            <a
-              href="/portfolio"
-              style={{
-                color: "white", // Highlight current page
-                fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
-                fontFamily: "'Silkscreen', cursive",
-                textDecoration: "none",
-                padding: "0.5rem",
-                paddingLeft: "1rem",
-                paddingBottom: "0rem",
-                paddingTop: "0rem",
-                textShadow: "0 0 8px rgba(0,170,255,0.5)"
-              }}
-            >
-              Projects
-            </a>
-            <a
-              href="/resume"
-              style={{
-                color: "white",
-                fontSize: "clamp(1rem, 3vw, 1.5rem)",
-                fontFamily: "'Silkscreen', cursive",
-                textDecoration: "none",
-                padding: "0.5rem",
-                paddingLeft: "1rem",
-                paddingBottom: "0rem",
-                paddingTop: "0rem",
-                transition: "all 0.3s ease",
-                ':hover': {
-                  color: "#00ffaa",
-                  fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
-                  textShadow: "0 0 8px rgba(0,255,170,0.5)"
-                }
-              }}
-            >
-              Resume
-            </a>
-            <a
-              href="/contact"
-              style={{
-                color: "#00aaff",
-                fontSize: "clamp(1rem, 3vw, 1.5rem)",
-                fontFamily: "'Silkscreen', cursive",
-                textDecoration: "none",
-                padding: "0.5rem",
-                paddingLeft: "1rem",
-                paddingBottom: "0rem",
-                paddingTop: "0rem",
-                transition: "all 0.3s ease",
-                ':hover': {
-                  color: "#ff00aa",
-                  fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
-                  textShadow: "0 0 8px rgba(255,0,170,0.5)"
-                }
-              }}
-            >
-              Contact
-            </a>
-          </nav>
+  style={{
+    display: "flex",
+    flexDirection: "column",
+  }}>
+    <Link
+      to="/"
+      style={{
+        color: "white",
+        fontSize: "clamp(1rem, 3vw, 1.5rem)",
+        fontFamily: "'Silkscreen', cursive",
+        textDecoration: "none",
+        padding: "0.5rem",
+        paddingLeft: "1rem",
+        paddingBottom: "0rem",
+        paddingTop: "0rem",
+        transition: "all 0.3s ease",
+        ':hover': {
+          color: "#ff5500",
+          fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
+          textShadow: "0 0 8px rgba(255,85,0,0.5)"
+        }
+      }}
+    >
+      Home
+    </Link>
+    <Link
+      to="/portfolio"
+      style={{
+        color: "white",
+        fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
+        fontFamily: "'Silkscreen', cursive",
+        textDecoration: "none",
+        padding: "0.5rem",
+        paddingLeft: "1rem",
+        paddingBottom: "0rem",
+        paddingTop: "0rem",
+        textShadow: "0 0 8px rgba(0,170,255,0.5)"
+      }}
+    >
+      Projects
+    </Link>
+    <Link
+      to="/resume"
+      style={{
+        color: "white",
+        fontSize: "clamp(1rem, 3vw, 1.5rem)",
+        fontFamily: "'Silkscreen', cursive",
+        textDecoration: "none",
+        padding: "0.5rem",
+        paddingLeft: "1rem",
+        paddingBottom: "0rem",
+        paddingTop: "0rem",
+        transition: "all 0.3s ease",
+        ':hover': {
+          color: "#00ffaa",
+          fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
+          textShadow: "0 0 8px rgba(0,255,170,0.5)"
+        }
+      }}
+    >
+      Resume
+    </Link>
+    <Link
+      to="/contact"
+      style={{
+        color: "#00aaff",
+        fontSize: "clamp(1rem, 3vw, 1.5rem)",
+        fontFamily: "'Silkscreen', cursive",
+        textDecoration: "none",
+        padding: "0.5rem",
+        paddingLeft: "1rem",
+        paddingBottom: "0rem",
+        paddingTop: "0rem",
+        transition: "all 0.3s ease",
+        ':hover': {
+          color: "#ff00aa",
+          fontSize: "clamp(1.1rem, 3.3vw, 1.65rem)",
+          textShadow: "0 0 8px rgba(255,0,170,0.5)"
+        }
+      }}
+    >
+      Contact
+    </Link>
+  </nav>
         </div>
 
         {/* Contact Content */}
